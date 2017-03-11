@@ -1,0 +1,61 @@
+<!--index.wxml-->
+<view class="container">
+
+  <view class="search_nav">
+    <image class="hot" src="../../imgs/hot_icon.png"></image>
+    <form>
+      <input class="input" placeholder-class="ph" placeholder="搜索"/>
+    </form>
+    <image class="button" src="../../imgs/button_icon.png"></image>
+  </view>
+
+  <swiper class="slide" indicator-dots="true" autoplay="true" circular="true">
+    <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+  </swiper>
+
+  <view class="follow">
+    <view class="t fn-clear">
+      <icon type="info" size="18"/>
+      <text class="txt">特别关注</text>
+      <text class="more">关注列表</text>
+    </view>
+    <view class="c">
+      <block wx:for="{{ follow }}">
+        <view>
+          <image src="{{ item.img }}"></image>
+          <text>{{ item.name }}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <view class="news">
+    <block wx:for="{{ news }}">
+      <view class="item">
+        <view class="t fn-clear">
+          <image src="{{ item.img }}"></image>
+          <view>
+            <text class="name">{{ item.name }}</text>
+            <text class="time">{{ item.time }}</text>
+          </view>
+        </view>
+        <view class="c">
+          <text class="name">{{ item.content }}</text>
+        </view>
+      </view>
+    </block>
+  </view>
+
+
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>

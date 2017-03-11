@@ -1,0 +1,26 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "转圈",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "backgroundColor": "#f8f8f8",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "收藏",
+      "selectedIconPath": "imgs/star_icon.png",
+      "iconPath": "imgs/star_icon.png"
+    }, {
+      "pagePath": "pages/logs/logs",
+      "text": "发现",
+      "selectedIconPath": "imgs/eye_icon.png",
+      "iconPath": "imgs/eye_icon.png"
+    }]
+  }
+}

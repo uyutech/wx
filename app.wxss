@@ -1,0 +1,59 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-top:90rpx;
+} 
+.search_nav{
+  position:fixed;
+  left:0;
+  top:0;
+  display:flex;
+  padding:20rpx 0;
+  height:50rpx;
+  width:100%;
+  background:#F8F8F8;
+  align-items: center;
+}
+.search_nav .hot{
+  margin:0 20rpx;
+  width:44rpx;
+  height:39rpx;
+}
+.search_nav .button{
+  margin:0 20rpx;
+  width:38rpx;
+  height:38rpx;
+}
+.search_nav .mg{
+  padding:14rpx 0 15rpx 18rpx;
+  width:30rpx;
+  height:30rpx;
+  background:#FFF;
+  border-bottom-left-radius:10rpx;
+  border-top-left-radius:10rpx;
+}
+.search_nav form{
+  flex:1;
+  padding-left:50rpx;
+  background:#FFF url(../../imgs/magnifier_icon.png) no-repeat 15rpx center;
+  background-size:30rpx 30rpx;
+  border-radius:10rpx;
+}
+.search_nav .input{
+}
+.search_nav .input.ph{
+  text-indent: 20rpx;
+}
+.fn-clear:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0
+}
